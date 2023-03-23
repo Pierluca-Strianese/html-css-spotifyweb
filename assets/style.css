@@ -32,6 +32,10 @@ a {
     color: var(--text-color-no);
 }
 
+a:hover {
+    color: var(--text-color);
+}
+
 .btn {
     border-radius: 9rem;
     padding: 1em 2.5em;
