@@ -51,6 +51,10 @@ a:hover {
 	overflow-y: auto;
 }
 
+ul {
+    list-style-type:none;
+}
+
 /* Layout */
 
 .container {
@@ -80,6 +84,7 @@ a:hover {
     z-index: 8;
     width: var(--width-sidebar);
     background-color: black;
+    padding: .8rem 0 0 .8rem;
 }
 
 .player {
@@ -120,6 +125,74 @@ a:hover {
 
 /* SIDEBAR */
 
+.sidebar .logo {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.sidebar .logo img {
+    width: 25px;
+    margin-right: .5rem;
+}
+
+.sidebar .logo p {
+    display: none;
+}
+
+.sidebar .main-menu,
+.sidebar .playlist {
+    padding-top: 2rem;
+}
+
+.sidebar nav li {
+    padding: .6rem 0;
+    margin-left: -.6rem;
+}
+
+.sidebar nav li i {
+    font-size: 1.2rem;
+    padding-left: calc(.6rem + 2px);;
+    padding-right: .5rem;
+}
+
+.sidebar nav li.active {
+	border-left: 2px solid greenyellow;
+}
+
+.sidebar .playlist h3{
+    padding: 1rem 0;
+}
+
+.sidebar .playlist .add-playlist {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.sidebar .playlist li {
+    padding: .5rem 0;
+}
+
+.sidebar .playlist .add-playlist i{
+    font-size: 2.5rem;
+    margin-right: 1rem;
+}
+
+@media (min-width: 600px) {
+	.sidebar .logo img {
+        width: 40px;
+    }
+
+    .sidebar .logo p {
+        display: inline-block;
+    }
+}
+
+/* NAV GRID */
+
 .main-content .content nav {
     font-size: .8rem;
     font-weight: bold;
@@ -129,7 +202,6 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
 	justify-content: center;
-	list-style: none;
 }
 
 .main-content .content nav li {
