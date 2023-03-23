@@ -3,9 +3,15 @@
 	--text-color: white;
     --text-color-no: #7F8185;
     --playbar-color: #7F8185;
-    --width-sidebar: 230px;
-    --height-upgrate: 100px;
-    --height-player: 50px;
+    --width-sidebar: 50px;
+    --height-upgrate: 90px;
+    --height-player: 90px;
+}
+
+@media (min-width: 600px) {
+	:root {
+		--width-sidebar: 230px;
+	}
 }
 
 * {
@@ -16,3 +22,51 @@
 
 /* Layout */
 
+.container {
+    height: 100vh;
+}
+
+.sidebar,
+.main-content {
+    position: fixed;
+	top: 0;
+	bottom: var(--height-player);
+}
+
+.main-content {
+    right: 0;
+    left: var(--width-sidebar);
+    background-color: aquamarine;
+}
+
+.main-content .content {
+    margin-top: var(--height-upgrate);
+    padding: 1rem;
+}
+
+.sidebar {
+    left: 0;
+    z-index: 8;
+    width: var(--width-sidebar);
+    background-color: green;
+}
+
+.player {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+    height: var(--height-player);
+    background-color: goldenrod;
+}
+
+.upgrade {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 7;
+    height: var(--height-upgrate);
+    background-color: rgba(0, 0, 0, .4);
+}
