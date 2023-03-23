@@ -1,0 +1,18 @@
+:root{
+	--backgroud: #151921;
+	--text-color: white;
+    --text-color-no: #7F8185;
+    --playbar-color: #7F8185;
+    --width-sidebar: 230px;
+    --height-upgrate: 100px;
+    --height-player: 50px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Layout */
+
