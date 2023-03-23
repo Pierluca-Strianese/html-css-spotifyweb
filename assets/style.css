@@ -151,9 +151,9 @@ nav li.active::after {
 
 .card	{
     aspect-ratio: 1 / 1;
-	background-color: salmon;
 	flex: 0 0 calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols));
     text-align: center;
+    margin-top: 1rem;
 }
 
 @media (min-width: 700px) {
@@ -176,7 +176,6 @@ nav li.active::after {
     font-size: .7rem;
     font-weight: lighter;
     color: var(--text-color-no);
-    margin-bottom: 1.5rem;
 }
 
 .card img {
@@ -188,6 +187,6 @@ nav li.active::after {
     margin: .5em;
 }
 
-.artisti .card {
+.artisti .card img {
     border-radius: 50%;
 }
