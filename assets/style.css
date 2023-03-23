@@ -2,7 +2,7 @@
 	--backgroud: #151921;
 	--text-color: #FFFF;
     --text-color-no: #7F8185;
-    --playbar-color: #7F8185;
+    --playbar-color: #282828;
     --width-sidebar: 50px;
     --height-upgrate: 90px;
     --height-player: 90px;
@@ -75,7 +75,7 @@ a {
     left: 0;
     z-index: 8;
     width: var(--width-sidebar);
-    background-color: green;
+    background-color: black;
 }
 
 .player {
@@ -85,7 +85,7 @@ a {
     left: 0;
     z-index: 9;
     height: var(--height-player);
-    background-color: goldenrod;
+    background-color: var(--playbar-color);
 }
 
 .upgrade {
@@ -104,6 +104,8 @@ a {
 .upgrade .btn {
     margin-right: 2rem;
 }
+
+/* MAIN CONTENT */
 
 /* SIDEBAR */
 
@@ -133,4 +135,59 @@ nav li.active::after {
 	left: 35%;
 	height: 2px;
 	background-color: greenyellow;
+}
+
+/* GRID */
+
+.content .grid {
+    --cols: 2;
+	--gap: 1rem;
+
+	display: flex;
+    /* justify-content: space-around; */
+	flex-wrap: wrap;
+	gap: var(--gap);
+}
+
+.card	{
+    aspect-ratio: 1 / 1;
+	background-color: salmon;
+	flex: 0 0 calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols));
+    text-align: center;
+}
+
+@media (min-width: 700px) {
+	.content .grid {
+		--cols: 4;
+	}
+}
+
+@media (min-width: 1100px) {
+	.content .grid {
+		--cols: 6;
+	}
+}
+
+.content h2 {
+    margin: 2rem 0 .4em 0;
+}
+
+.content p {
+    font-size: .7rem;
+    font-weight: lighter;
+    color: var(--text-color-no);
+    margin-bottom: 1.5rem;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h3 {
+    font-size: .9rem;
+    margin: .5em;
+}
+
+.artisti .card {
+    border-radius: 50%;
 }
