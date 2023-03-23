@@ -80,11 +80,16 @@ ul {
 }
 
 .sidebar {
+    display: flex;
+    flex-direction: column;
     left: 0;
     z-index: 8;
     width: var(--width-sidebar);
     background-color: black;
-    padding: .8rem 0 0 .8rem;
+    padding-top: .8rem;
+    padding-left: calc(1.4rem + 3px);
+    font-size: .9rem;
+    color: var(--text-color-no);
 }
 
 .player {
@@ -129,8 +134,10 @@ ul {
     display: flex;
     align-items: center;
     margin-top: 1rem;
+    margin-bottom: 1.5rem;
     font-size: 1.5rem;
     font-weight: bold;
+    color: var(--text-color);
 }
 
 .sidebar .logo img {
@@ -144,26 +151,32 @@ ul {
 
 .sidebar .main-menu,
 .sidebar .playlist {
-    padding-top: 2rem;
+    padding-top: 1rem;
 }
 
-.sidebar nav li {
-    padding: .6rem 0;
-    margin-left: -.6rem;
+.sidebar .main-menu nav div {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-left: -1.4rem;
+    padding: .3rem 0;
 }
 
-.sidebar nav li i {
-    font-size: 1.2rem;
-    padding-left: calc(.6rem + 2px);;
-    padding-right: .5rem;
+.sidebar .main-menu nav div img{
+    margin-left: 1.2rem;
+    margin-right: .5rem;
+    height: 30px;
 }
 
-.sidebar nav li.active {
-	border-left: 2px solid greenyellow;
+.sidebar nav div.active {
+    margin-left: -25.4px;
+	border-left: 3px solid greenyellow;
+    color: var(--text-color);
 }
 
 .sidebar .playlist h3{
     padding: 1rem 0;
+    color: var(--text-color);
 }
 
 .sidebar .playlist .add-playlist {
@@ -179,6 +192,52 @@ ul {
 .sidebar .playlist .add-playlist i{
     font-size: 2.5rem;
     margin-right: 1rem;
+}
+
+.sidebar .user {
+    position: absolute;
+    bottom: 9px;
+    width: 190px;
+}
+
+.sidebar .user .install {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+.sidebar .user .install img {
+    width: 15px;
+    aspect-ratio: 1 / 1;
+    margin-right: .5rem;
+}
+
+.sidebar .user .login {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    font-weight: bold;
+    width: 100%;
+    padding-top: 1rem;
+    border-top: 1px solid var(--text-color-no);
+}
+
+.sidebar .user img {
+    height: 100%;
+}
+
+.sidebar .user .profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 1.5rem;
+    aspect-ratio: 1 / 1;
+    background-color: #7F8185;
+    border-radius: 50%;
+    margin-right: .5rem;
 }
 
 @media (min-width: 600px) {
