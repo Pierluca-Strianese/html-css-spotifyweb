@@ -367,7 +367,7 @@ nav li.active::after {
 }
 
 .subtitle {
-    font-size: .7rem;
+    font-size: .6rem;
     font-weight: lighter;
     color: var(--text-color-no);
 }
@@ -417,16 +417,14 @@ nav li.active::after {
     align-items: center;
 }
 
-.player .play-brano {
-    margin-left: 1rem;
-}
-
+.player .play-brano,
 .player .audio {
-    margin-right: 1rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
 }
 
 .player .play-brano img {
-    width: 50px;
+    width: 40px;
 }
 
 .player .play-brano .img-play div {
@@ -434,12 +432,21 @@ nav li.active::after {
 }
 
 .player .play-brano .love {
-    margin-left: 2rem;
+    margin-left: 1rem;
 }
 
 .player .play-brano .love i {
     display: block;
     margin: .5rem;
+}
+
+.play-brano,
+.audio {
+    width: 170px;
+}
+
+.control {
+    width: 40%;
 }
 
 .control .btn-control {
@@ -456,11 +463,10 @@ nav li.active::after {
 }
 
 .control .btn-control i {
-    margin: 0 1rem;
+    margin: 0 .5rem;
 }
 
 .control .time-play {
-    width: 50vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -476,12 +482,12 @@ nav li.active::after {
     background-color: var(--text-color-no);
 }
 
-.real {
-    position: fixed;
+.timereal {
+    position: absolute;
     left: 0;
     top: 0;
     background-color: white;
-    height: 5px;
+    height: 100%;
     width: 20%;
     border-radius: 1rem;
 
@@ -489,7 +495,7 @@ nav li.active::after {
 
 .player .audio i {
     font-size: .8rem;
-    margin-left: 1rem;
+    margin-left: .6rem;
 }
 
 .player .audio .timeline {
