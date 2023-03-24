@@ -82,14 +82,15 @@ ul {
 .sidebar {
     display: flex;
     flex-direction: column;
+    align-items: start;
     left: 0;
     z-index: 8;
     width: var(--width-sidebar);
     background-color: black;
     padding-top: .8rem;
-    padding-left: calc(1.4rem + 3px);
     font-size: .9rem;
     color: var(--text-color-no);
+    padding-left: calc(1.4rem + 3px);
 }
 
 .player {
@@ -135,18 +136,19 @@ ul {
     align-items: center;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--text-color);
 }
 
-.sidebar .logo img {
+.sidebar .logo .logo-small {
     width: 25px;
-    margin-right: .5rem;
+    display: none;
 }
 
-.sidebar .logo p {
-    display: none;
+.sidebar .logo .logo-big {
+    width: 150px;
+}
+
+.sidebar .text {
+    margin-left: .5rem;
 }
 
 .sidebar .main-menu,
@@ -154,22 +156,23 @@ ul {
     padding-top: 1rem;
 }
 
-.sidebar .main-menu nav div {
+.sidebar .main-menu {
+    margin-left: calc(-1.4rem + (-3px));
+}
+
+.sidebar .main-menu .btn-nav {
     display: flex;
     align-items: center;
     font-weight: bold;
-    margin-left: -1.4rem;
     padding: .3rem 0;
 }
 
-.sidebar .main-menu nav div img{
+.sidebar .main-menu img{
     margin-left: 1.2rem;
-    margin-right: .5rem;
     height: 30px;
 }
 
 .sidebar nav div.active {
-    margin-left: -25.4px;
 	border-left: 3px solid greenyellow;
     color: var(--text-color);
 }
@@ -202,8 +205,7 @@ ul {
 
 .sidebar .user .install {
     display: flex;
-    align-items: center;
-    padding-bottom: 1rem;
+    padding-bottom: .5rem;
     font-size: .8rem;
     font-weight: bold;
 }
@@ -211,7 +213,6 @@ ul {
 .sidebar .user .install img {
     width: 15px;
     aspect-ratio: 1 / 1;
-    margin-right: .5rem;
 }
 
 .sidebar .user .login {
@@ -220,7 +221,7 @@ ul {
     color: var(--text-color);
     font-weight: bold;
     width: 100%;
-    padding-top: 1rem;
+    padding-top: .5rem;
     border-top: 1px solid var(--text-color-no);
 }
 
@@ -237,18 +238,80 @@ ul {
     aspect-ratio: 1 / 1;
     background-color: #7F8185;
     border-radius: 50%;
-    margin-right: .5rem;
 }
 
-@media (min-width: 600px) {
-	.sidebar .logo img {
-        width: 40px;
+@media (max-width: 600px) {
+
+    .sidebar {
+        padding-left: 0px;
+        align-items: center;
     }
 
-    .sidebar .logo p {
+    .sidebar .logo .logo-small {
         display: inline-block;
     }
+    
+    .sidebar .logo .logo-big,
+    .sidebar .text,
+    .sidebar .playlist {
+        display: none;
+    }
+
+    .sidebar .user .login {
+        border-top: 0px;
+    }
+
+    .sidebar .main-menu {
+        display: flex;
+        justify-content: center;
+        margin-left: 0px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .sidebar .main-menu img {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .sidebar nav div.active {
+        margin-left: 0px;
+        border-left: 0px;
+    }
+
+    .sidebar .user {
+        width: var(--width-sidebar);
+        left: 0;
+    }
+
+    .sidebar .user .install,
+    .sidebar .user .login {
+        justify-content: center;
+    }
 }
+
+/* @media (min-width: 600px) {
+
+    .sidebar {
+        align-items: start;
+        padding-top: .8rem;
+        padding-left: calc(1.4rem + 3px);
+        font-size: .9rem;
+        color: var(--text-color-no);
+    }
+
+    .sidebar .logo .logo-small {
+        display: none;
+    }
+
+    .sidebar .logo .logo-big {
+        display: flex;
+    }
+
+    .sidebar .main-menu .active img {
+        display: block;
+    }
+} */
 
 /* NAV GRID */
 
